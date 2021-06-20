@@ -222,7 +222,7 @@ MonoBehaviour:
     m_Bits: 64
   acelleration: 100
   maxVelocity: 10
-  jumpForce: 750
+  jumpForce: 1000
   drag: 1.5
 --- !u!114 &7207192713325338262
 MonoBehaviour:
