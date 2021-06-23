@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,11 +11,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float maxVelocity;
     [SerializeField] float jumpForce;
 
+	[SerializeField] UnityEvent OnLandEvent;
+
     private bool isGrounded;
+    private bool wasGrounded;
 
     void Update()
     {
+        wasGrounded = isGrounded;
         isGrounded = groundDetectorCollider.IsTouchingLayers(groundLayer);
+
+        if (!wasGrounded && isGrounded){
+            OnLandEvent.Invoke();
+        }
     }
 
     public void Move(float _direction)
