@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce;
 
 	[SerializeField] UnityEvent OnLandEvent;
+    [SerializeField] UnityEvent OnJumpEvent;
 
     private bool isGrounded;
     private bool wasGrounded;
@@ -23,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (!wasGrounded && isGrounded){
             OnLandEvent.Invoke();
+        }
+        if (wasGrounded && !isGrounded){
+            OnJumpEvent.Invoke();
         }
     }
 
