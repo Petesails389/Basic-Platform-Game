@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 369881619042381057}
   - component: {fileID: 369881619042381058}
   m_Layer: 0
-  m_Name: Timer
+  m_Name: Fuel Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,5 +211,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72335c80c3905b43fabd0249a93f74a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 100
+  totalFuel: 0
   timerForeground: {fileID: 369881617746329718}

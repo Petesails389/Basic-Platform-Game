@@ -6,7 +6,6 @@ public class TimerScript : MonoBehaviour
 {
     [SerializeField] float totalFuel;
     [SerializeField] Transform timerForeground;
-    [SerializeField] bool isMoving = false;
 
     private float fuel;
 
@@ -26,5 +25,10 @@ public class TimerScript : MonoBehaviour
             print("quit");
             Application.Quit();
         }
+    }
+
+    public void Fuel(float _amount)
+    {
+        fuel += _amount;
     }
 }
